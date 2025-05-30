@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Load min250515.csv": {
+      "commandName": "Project",
+      "commandLineArgs": "min250515.csv"
+    }
+  }
+}

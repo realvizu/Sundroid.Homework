@@ -3,6 +3,9 @@ using Sundroid.Homework.Persistence.Entities;
 
 namespace Sundroid.Homework.DataLoader.Loading;
 
+/// <summary>
+/// Converts parser result objects to DB entities.
+/// </summary>
 public static class ParsedItemToEntityConverter
 {
     public static DataLogger ToEntity(this ParsedDataLoggerLine parsedData)

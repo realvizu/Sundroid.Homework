@@ -5,7 +5,7 @@ using Sundroid.Homework.Persistence.Entities;
 namespace Sundroid.Homework.Persistence;
 
 /// <summary>
-/// Implements DB operations for data collector entities.
+/// Implements DB operations for the data collector entities.
 /// </summary>
 public sealed class DataCollectorRepository(
     IDbContextFactory<DataCollectorDbContext> dbContextFactory,

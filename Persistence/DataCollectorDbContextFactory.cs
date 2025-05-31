@@ -2,6 +2,9 @@
 
 namespace Sundroid.Homework.Persistence;
 
+/// <summary>
+/// Creates DataCollectorDbContext instances.
+/// </summary>
 public sealed class DataCollectorDbContextFactory(string connectionString) : IDbContextFactory<DataCollectorDbContext>
 {
     public DataCollectorDbContext CreateDbContext()

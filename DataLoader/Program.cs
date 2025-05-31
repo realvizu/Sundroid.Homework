@@ -4,6 +4,11 @@ using Sundroid.Homework.Persistence;
 
 namespace Sundroid.Homework.DataLoader;
 
+/// <summary>
+/// Implements the data loader console application.
+/// Specify the loaded file name as a command line parameter.
+/// Specify the DB connection string in appsettings.json.
+/// </summary>
 internal class Program
 {
     public static async Task Main(string[] args)
@@ -11,7 +16,7 @@ internal class Program
         try
         {
             if (args.Length != 1)
-                throw new Exception("Please specify the filename to load as a command line parameter.");
+                throw new Exception("Please specify exactly 1 parameter: the filename to load.");
 
             var filename = args[0];
             var connectionString = GetConnectionString();
@@ -19,7 +24,7 @@ internal class Program
             var repository = new DataCollectorRepository(dbContextFactory, TimeProvider.System);
 
             Console.WriteLine($"Loading {filename} to DB.");
-            Console.WriteLine($"ConnectionString={connectionString})");
+            Console.WriteLine($"ConnectionString: {connectionString}");
 
             var loader = new FileToDbLoader(repository);
             await loader.LoadFileToDbAsync(filename);

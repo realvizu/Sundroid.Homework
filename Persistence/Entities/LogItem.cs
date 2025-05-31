@@ -3,6 +3,9 @@
 /// <summary>
 /// Entity class for a log item that belongs to an inverter.
 /// </summary>
+/// <remarks>
+/// See the model mapping and the DB constraint specifications in <see cref="DataCollectorDbContext"/>.
+/// </remarks>
 public sealed class LogItem
 {
     /// <summary>
@@ -16,13 +19,22 @@ public sealed class LogItem
     public int InverterId { get; set; }
 
     /// <summary>
-    /// (InverterId + Time) should be unique.
+    /// The UTC timestamp of the value set.
     /// </summary>
+    /// <remarks>
+    /// InverterId + Time must be unique.
+    /// </remarks>
     public DateTimeOffset Time { get; set; }
 
+    /// <summary>
+    /// Contains the logged values imported from the input files.
+    /// </summary>
     public required ValueSet Values { get; set; }
 
     public int CycleTime { get; set; }
 
+    /// <summary>
+    /// UTC timestamp of the last update of this record.
+    /// </summary>
     public DateTimeOffset UpdatedAtUtc { get; set; }
 }

@@ -4,6 +4,9 @@ using CsvHelper.Configuration;
 
 namespace Sundroid.Homework.DataLoader.Parsing;
 
+/// <summary>
+/// Implements the logic of parsing a single line of an input file.
+/// </summary>
 public static class FileLineParser
 {
     private const string SerialNumberPrefix = "ESN:";

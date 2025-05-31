@@ -4,8 +4,14 @@ using Sundroid.Homework.Persistence.Entities;
 
 namespace Sundroid.Homework.DataLoader.Loading;
 
+/// <summary>
+/// Implements the file loader service.
+/// </summary>
 public class FileToDbLoader(DataCollectorRepository repository)
 {
+    /// <summary>
+    /// Loads the given file into the DB via a <see cref="DataCollectorRepository"/>.
+    /// </summary>
     public async Task LoadFileToDbAsync(string filename)
     {
         int currentDataLoggerId = 0;

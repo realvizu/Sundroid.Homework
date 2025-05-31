@@ -3,7 +3,11 @@ using Sundroid.Homework.Persistence.Entities;
 
 namespace Sundroid.Homework.Persistence;
 
-public sealed class DataCollectorDbContext(DbContextOptions<DataCollectorDbContext> options) : DbContext(options)
+/// <summary>
+/// Specifies the DataCollector DB schema and its mapping to entity objects.
+/// </summary>
+public sealed class DataCollectorDbContext(DbContextOptions<DataCollectorDbContext> options) 
+    : DbContext(options)
 {
     public DbSet<DataLogger> DataLoggers { get; set; }
     public DbSet<Inverter> Inverters { get; set; }

@@ -5,7 +5,7 @@ using Sundroid.Homework.Persistence;
 using Sundroid.Homework.Persistence.Entities;
 using Xunit;
 
-namespace Sundroid.Homework.IntegrationTests;
+namespace Sundroid.Homework.IntegrationTests.Persistence;
 
 public sealed class DataCollectorRepositoryTests(IntegrationTestFixture testFixture)
     : IntegrationTestBase(testFixture)

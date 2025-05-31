@@ -2,6 +2,10 @@
 
 namespace Sundroid.Homework.DataLoader.Parsing;
 
+/// <summary>
+/// Specification for the CsvHelper tool that describes the structure of those input file lines,
+/// that contain a timestamped value set. Produces a <see cref="ParsedLogItemLine"/> object.
+/// </summary>
 public sealed class ParsedLogItemLineClassMap : ClassMap<ParsedLogItemLine>
 {
     public ParsedLogItemLineClassMap()

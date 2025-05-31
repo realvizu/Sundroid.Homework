@@ -6,7 +6,7 @@ using Sundroid.Homework.Persistence;
 using Sundroid.Homework.Persistence.Entities;
 using Xunit;
 
-namespace Sundroid.Homework.IntegrationTests;
+namespace Sundroid.Homework.IntegrationTests.DataLoader;
 
 /// <summary>
 /// These tests are based on the testfile.csv that you can find in the project folder.

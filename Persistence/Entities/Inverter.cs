@@ -3,6 +3,9 @@
 /// <summary>
 /// Entity class for an inverter.
 /// </summary>
+/// <remarks>
+/// See the model mapping and the DB constraint specifications in <see cref="DataCollectorDbContext"/>.
+/// </remarks>
 public sealed class Inverter
 {
     /// <summary>
@@ -10,7 +13,14 @@ public sealed class Inverter
     /// </summary>
     public int Id { get; set; }
 
+    /// <summary>
+    /// The name of the inverter as it appears in the input files.
+    /// </summary>
     public required string Name { get; set; }
+
+    /// <summary>
+    /// Unique serial number of the inverter.
+    /// </summary>
     public required string SerialNumber { get; set; }
 
     /// <summary>

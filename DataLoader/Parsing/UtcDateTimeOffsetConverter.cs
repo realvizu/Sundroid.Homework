@@ -5,6 +5,10 @@ using CsvHelper.TypeConversion;
 
 namespace Sundroid.Homework.DataLoader.Parsing;
 
+/// <summary>
+/// Converts the input file's timestamp string representation into a UTC DateTimeOffset.
+/// Used by the CsvHelper tool. See: <see cref="ParsedLogItemLineClassMap"/>
+/// </summary>
 public sealed class UtcDateTimeOffsetConverter : ITypeConverter
 {
     public object? ConvertFromString(string? text, IReaderRow row, MemberMapData memberMapData)

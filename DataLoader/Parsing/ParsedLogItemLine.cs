@@ -2,6 +2,9 @@
 
 namespace Sundroid.Homework.DataLoader.Parsing;
 
+/// <summary>
+/// The result object for the input file lines that specify a timestamped value set.
+/// </summary>
 public sealed class ParsedLogItemLine()
     : ParsedLineBase(ParsedLineType.LogItem)
 {

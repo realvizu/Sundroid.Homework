@@ -1,7 +1,7 @@
 ﻿namespace Sundroid.Homework.Persistence.Entities;
 
 /// <summary>
-/// Defines the numeric values of a data entry.
+/// Defines the numeric values of a log entry.
 /// Separated from the DB entity to be reusable in other parts of the application.
 /// </summary>
 public sealed class ValueSet
